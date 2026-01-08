@@ -29,7 +29,7 @@ function y = bandpass_filter(x, fs, f_lo, f_hi)
     end
 
     % Normalize cutoffs to Nyquist
-    wn = [f_lo, f_hi] / (fs / 2);
+    wn = [f_lo, f_hi] / (fs / 4);
     wn(wn <= 0) = eps;
     wn(wn >= 1) = 1 - eps;
 
