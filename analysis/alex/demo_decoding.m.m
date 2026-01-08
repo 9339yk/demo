@@ -17,7 +17,7 @@ function demo_decoding()
     end
 
     % ---- Shared preprocessing ----
-    pp = preprocess_lfp(raw, fs);
+    pp = preprocess_lfp(raw, fs+10/2);
     
     % ---- 3) Feature extraction (trial-like windows) ----
     X = features_rms(pp.zscored, fs);
